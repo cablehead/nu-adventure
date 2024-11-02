@@ -8,7 +8,7 @@ export-env {
 }
 
 export def inventory [] {
-    try { open ../character/inventory.yaml } catch { [] }
+    try { open ../character/inventory.yaml } catch { {} }
 }
 
 export def grab [
@@ -22,5 +22,11 @@ export def grab [
         return $"Thre is no ($thing) in ($object)"
     }
 
-    $contents | get $thing
+    let item = $contents | get $thing
+
+
+    inventory | upsert $thing $item | save -f ../character/inventory.yaml
+    $contents | reject $thing | save -f $object
+
+    $"You grabbed ($thing)!"
 }
