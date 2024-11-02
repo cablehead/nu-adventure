@@ -2,6 +2,8 @@
 
 This is a tiny experiment in making a text adventure game based on Nushell.
 
+<img width="829" alt="image" src="https://github.com/user-attachments/assets/0c00824e-bf80-4435-9bd9-0d2fd1dc6736">
+
 I have two threads I'm pulling on with it:
 
 1. My girls are now 7 and 5. I have vague memories of using a
