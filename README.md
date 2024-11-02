@@ -2,7 +2,7 @@
 
 This is a tiny experiment in making a text adventure game based on Nushell.
 
-<img width="829" alt="image" src="https://github.com/user-attachments/assets/0c00824e-bf80-4435-9bd9-0d2fd1dc6736">
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/83365cc2-73de-4df9-a3c6-b2ad940ecb51">
 
 I have two threads I'm pulling on with it:
 
