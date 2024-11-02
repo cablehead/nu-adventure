@@ -1,0 +1,4 @@
+Berries:
+  name: Healing Berries
+  description: Glowing, enchanted berries
+  effect: Heals someone who has been hurt
