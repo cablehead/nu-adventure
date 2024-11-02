@@ -1,29 +1,30 @@
 export-env {
     $env.config = {
         table: {
-            mode: with_love # Set the table mode to with_love
-            show_empty: true # Enable showing 'empty list' and 'empty record' placeholders
+            mode: rounded
+            show_empty: true
         }
     }
+
+    $env.config.hooks.display_output = "table -e"
 }
 
 export def inventory [] {
-    try { open ../character/inventory.yaml } catch { {} }
+    let contents = try { open ../character/inventory.yaml } catch { {} }
+    $contents
 }
 
 export def grab [
     object: string
     thing: string
 ] {
-
     let contents = open $object
 
     if $thing not-in $contents {
-        return $"Thre is no ($thing) in ($object)"
+        return $"There is no ($thing) in ($object)"
     }
 
     let item = $contents | get $thing
-
 
     inventory | upsert $thing $item | save -f ../character/inventory.yaml
     $contents | reject $thing | save -f $object
