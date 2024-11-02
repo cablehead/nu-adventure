@@ -57,7 +57,7 @@ There's not much to it (haha). This is a tiny start.
 To set up for a player:
 
 - At the Nushell REPL:
-  - `git clone ...`
+  - `git clone https://github.com/cablehead/nu-adventure.git`
   - `use game/commands.nu *`
   - `cd room`
   - `bat ../intro.md`
